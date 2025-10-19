@@ -1,20 +1,14 @@
 ﻿ID;Aula;Fecha;HoraInicio;HoraFin;Responsable;Estado;TipoReserva;TipoEvento
-1;"C-201";2025-10-21;07:00;12:00;"Alex";ACTIVA;ReservaClase;
-2;"C-202";2025-10-22;13:00;16:00;"Ana";ACTIVA;ReservaClase;
-3;"C-203";2025-10-23;07:00;11:00;"Juan";ACTIVA;ReservaPractica;
+1;"C-201";2025-10-21;10:00;15:30;"Alex";CANCELADA;ReservaClase;
 
 ----Top 3 aulas con más horas----
 Aula;Horas
 "C-201";5
-"C-203";4
-"C-202";3
 
 ----Ocupación por tipo de aula----
 Tipo;CantidadReservas
-LABORATORIO;1
-TEORICA;2
+TEORICA;1
 
 ----Distribución por tipo de reserva----
 TipoReserva;Cantidad
-ReservaPractica;1
-ReservaClase;2
+ReservaClase;1

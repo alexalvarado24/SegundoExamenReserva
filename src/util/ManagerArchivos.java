@@ -12,10 +12,15 @@ import java.util.ArrayList;
  *
  * @author Emir Alvarado
  */
+/**
+ * Clase utilitaria para guardar datos de aulas y reservas en archivos de texto.
+ * No maneja la lectura, solo la escritura.
+ */
 public class ManagerArchivos {
-  public static void guardarAulas(ArrayList<Aula> aulas, String filename) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+  public static void guardarAulas(ArrayList<Aula> aulas, String filename) { //Almacena los datos
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) { //BufferedWriter optimiza la escritura en archivos.
             for (Aula a : aulas) {
+                // Escribe los datos separados por coma: ID, nombre, tipo y capacidad
                 writer.write(a.getId() + "," + a.getNombre() + "," + a.getTipo() + "," + a.getCapacidad());
                 writer.newLine();
             }

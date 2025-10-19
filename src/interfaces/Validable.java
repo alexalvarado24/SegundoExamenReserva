@@ -9,6 +9,12 @@ package interfaces;
  *
  * @author Emir Alvarado
  */
+
+/*Toda clase que implemente Validable debe definir cómo validar sus datos.
+Devuelve boolean:
+true si los datos de la clase son correctos.
+false si hay algún error o inconsistencia.
+*/
 public interface Validable {
     boolean validar();
 }

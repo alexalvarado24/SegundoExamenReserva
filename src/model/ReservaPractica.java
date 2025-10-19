@@ -13,7 +13,7 @@ public class ReservaPractica extends Reserva {
     public ReservaPractica(int id, Aula aula, java.time.LocalDate fecha, java.time.LocalTime horaInicio, java.time.LocalTime horaFin, String responsable) {
         super(id, aula, fecha, horaInicio, horaFin, responsable);
     }
-
+//Las reservas Practica solo estan disponibles en LABORATORIO
     @Override
     public boolean validar() {
         if(aula.getTipo() != TipoAula.LABORATORIO) {

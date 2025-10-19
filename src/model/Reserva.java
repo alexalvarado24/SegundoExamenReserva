@@ -11,7 +11,10 @@ import java.time.LocalTime;
  *
  * @author Emir Alvarado
  */
-public abstract class Reserva implements Validable {
+//La clase se extiende a la interfaz para validar
+public abstract class Reserva implements Validable { //Clase abstracta no se puede instanciar directamente
+    
+    //Atributos encapsulados
     protected int id;
     protected Aula aula;
     protected LocalDate fecha;
@@ -19,7 +22,7 @@ public abstract class Reserva implements Validable {
     protected LocalTime horaFin;
     protected String responsable;
     protected String estado; // ACTIVA, CANCELADA
-
+//Constructor
     public Reserva(int id, Aula aula, LocalDate fecha, LocalTime horaInicio, LocalTime horaFin, String responsable) {
         this.id = id;
         this.aula = aula;
@@ -29,7 +32,7 @@ public abstract class Reserva implements Validable {
         this.responsable = responsable;
         this.estado = "ACTIVA";
     }
-
+//Getters y setters
     public int getId() { return id; }
     public Aula getAula() { return aula; }
     public LocalDate getFecha() { return fecha; }
@@ -38,7 +41,8 @@ public abstract class Reserva implements Validable {
     public String getResponsable() { return responsable; }
     public String getEstado() { return estado; }
     public void cancelar() { estado = "CANCELADA"; }
-
+    
+// Método de la interfaz Validable que será implementado por cada subclase
     @Override
     public abstract boolean validar();
 

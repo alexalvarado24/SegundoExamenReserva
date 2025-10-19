@@ -20,7 +20,7 @@ public class ReservaEvento extends Reserva {
     }
 
     public TipoEvento getTipoEvento() { return tipoEvento; }
-
+    //Las reservas Evento solo estan disponibles en AUDITORIO
     @Override
     public boolean validar() {
         if(aula.getTipo() != TipoAula.AUDITORIO) {
@@ -29,7 +29,7 @@ public class ReservaEvento extends Reserva {
         }
         return true;
     }
-
+//Añade que tipo de evento se llevará a cabo 
     @Override
     public String toString() {
         return super.toString() + ", tipoEvento=" + tipoEvento;
